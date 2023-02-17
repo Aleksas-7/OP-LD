@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <numeric>
 
 using std::cin;
 using std::copy;
@@ -15,5 +16,5 @@ using std::setw;
 using std::string;
 using std::swap;
 using std::vector;
-
-// copy func is algoritmai.h
+using std::sort;
+using std::accumulate;
