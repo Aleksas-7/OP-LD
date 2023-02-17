@@ -1,9 +1,6 @@
 // Ivesties tikrinimas:
 // https://www.itcodar.com/c-plus-1/how-to-do-input-validation-in-c-with-cin.html
 
-// Rikiavimas (bubble sort):
-// https://www.geeksforgeeks.org/cpp-program-for-bubble-sort/
-
 #include "Mylib.h"
 
 struct studentas {
@@ -16,44 +13,23 @@ int random_to_int(int to) {
   return rand() % to + 1;
 }
 
-void bubbleSort(int arr[], int n) {
-  int i, j;
-  for (i = 0; i < n - 1; i++) {
-    for (j = 0; j < n - i - 1; j++) {
-      if (arr[j] > arr[j + 1]) {
-        swap(arr[j], arr[j + 1]);
-      }
-    }
-  }
-}
-
 double rask_studento_galutini_vid(vector<int> paz, int egz) {
-  double vidurkis = 0;
-  for (int i = 0; i < paz.size(); i++) {
-    vidurkis += paz[i];
-  }
+  double vidurkis = accumulate(paz.begin(), paz.end(), 0);
   vidurkis /= paz.size();
-
   return (0.4 * vidurkis) + (0.6 * egz);
 }
 
 double rask_studento_galutine_med(vector<int> paz, int egz) {
   double galutinis;
-  int *arr = new int[paz.size()];
-  for (int x = 0; x < paz.size(); x++) {
-    arr[x] = paz[x];
-  }
-  bubbleSort(arr, paz.size());
+  sort(paz.begin(), paz.end());
 
   if (paz.size() % 2 == 0) {
     // Lyginio sk mediana
-    int vi = paz.size() / 2;
-    galutinis = (1.0 * arr[vi] + arr[vi - 1]);
+    galutinis = (1.0 * paz[paz.size() / 2] + paz[(paz.size() / 2) - 1]);
   } else {
     // Nelyginio sk mediana
-    galutinis = arr[(paz.size() - 1) / 2];
+    galutinis = paz[(paz.size() - 1) / 2];
   }
-  delete[] arr;
   return (0.4 * galutinis) + (0.6 * egz);
 }
 
@@ -77,7 +53,6 @@ int duok_man_int(int from, int to) {
 
 char duok_man_char(char a = '`', char b = '`') {
   char ats;
-
   while (true) {
     if (cin >> ats) {
       if ((ats == a || ats == b) && (ats != '`')) {
@@ -153,7 +128,7 @@ void spausd_v0_1(vector<studentas> st) {
   cout << endl << "Pavardė" << setw(10) << "Vardas";
   if (pasirinkimas == 'v') {
     cout << setw(20) << "Galutinis(Vid.)" << endl;
-  } else if (pasirinkimas == 'm') {
+  } else {
     cout << setw(20) << "Galutinis(Med.)" << endl;
   }
 
@@ -168,9 +143,7 @@ void spausd_v0_1(vector<studentas> st) {
     if (pasirinkimas == 'v') {
       galutinis = rask_studento_galutini_vid(st[nr].paz, st[nr].egz);
     }
-
-    // Rasti galutine mediana: (jei pasi == 'm')
-    if (pasirinkimas == 'm') {
+    else {
       galutinis = rask_studento_galutine_med(st[nr].paz, st[nr].egz);
     }
 
