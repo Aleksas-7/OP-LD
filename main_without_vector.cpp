@@ -4,6 +4,8 @@
 // Rikiavimas (bubble sort):
 // https://www.geeksforgeeks.org/cpp-program-for-bubble-sort/
 
+// Jau po vectoriu darymo nebetaisiu sio failo.
+
 #include "Mylib.h"
 
 struct studentas {
