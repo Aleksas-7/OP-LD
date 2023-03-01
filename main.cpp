@@ -29,7 +29,7 @@ int main() {
       spausd_v0_2(ptr);
     }
     catch (std::exception &e){cout << "Atsitiko problema su failo nuskaitymu: " << e.what() << endl;}
-    spausdink_stud(ptr);
+    //spausdink_stud(ptr);
     
   }
 
