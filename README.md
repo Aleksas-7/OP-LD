@@ -1,5 +1,9 @@
 # Obejktinio-Programavimo-LD
 
+v0.3:
+
+Programos failai išskirstyti per kelis failus.
+
 v0.2: 
 
 Pridėjau būdą nuskaityti studentus iš atskiro duomenų failo, ir juos atspausdinti "out.txt" faile.
