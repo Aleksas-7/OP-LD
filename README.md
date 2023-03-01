@@ -27,4 +27,3 @@ Ir galiausiai išvedama informacija:
 
 Pavardė | Vardas | Galutinis pažimys
 
-
