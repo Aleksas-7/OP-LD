@@ -3,11 +3,6 @@
 // Ivesties tikrinimas:
 // https://www.itcodar.com/c-plus-1/how-to-do-input-validation-in-c-with-cin.html
 
-int random_to_int(int to) 
-{
-  return rand() % to + 1;
-}
-
 double rask_studento_galutini_vid(vector<int> paz, int egz) 
 {
   double vidurkis = accumulate(paz.begin(), paz.end(), 0);
@@ -68,7 +63,7 @@ char duok_man_char(char a = '.', char b = '.', char c = '.')
   return ats;
 }
 
-void spausd_v0_1(vector<studentas> *st) 
+void spausd_v0_1(vector<studentas> &st) 
 {
   cout << " | Jei norite matyti" << endl;
   cout << "vidurkius, iveskite v" << endl;
@@ -87,7 +82,7 @@ void spausd_v0_1(vector<studentas> *st)
   double galutinis;
 
   // Eiti per visus studentus:
-  for (auto &nr : (*st)) {
+  for (auto &nr : st) {
 
     // Susirandu Galutini vidurki rez: (jei pasi == 'v')
     if (pasirinkimas == 'v') {
@@ -102,28 +97,16 @@ void spausd_v0_1(vector<studentas> *st)
   }
 }
 
-int partition(vector<studentas> *ptr, int low, int high)
+char duok_man_chara() 
 {
-    int i = (low - 1);
- 
-    for (int j = low; j <= high - 1; j++) {
-        if ((*ptr).at(j).vardas < (*ptr).at(high).vardas) {
-            i++;
-            swap((*ptr)[i], (*ptr)[j]);
-        }
+  char ats;
+  while (true) {
+    if (cin >> ats) {
+      return ats;
+    } else {
+      cout << "Ivestis neteisinga. " << endl;
+      cin.clear();
+      cin.ignore(50, '\n');
     }
-    swap((*ptr)[i + 1], (*ptr)[high]);
-    return (i + 1);
+  }
 }
- 
-void quickSort(vector<studentas> *ptr, int low, int high)
-{
-    if (low < high) {
-        int pi = partition(ptr, low, high);
-
-        quickSort(ptr, low, pi - 1);
-        quickSort(ptr, pi + 1, high);
-    }
-}
-
-

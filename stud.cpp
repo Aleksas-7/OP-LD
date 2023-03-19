@@ -1,35 +1,5 @@
 #include "Mylib.h"
-
-studentas sukurk_atsitiktinai (int kiek_nd){
-    int vard_k = 3;
-    string vardai_m[3] = {"Singailas", "Odisejas", "Algintas"};
-    string vardai_f[3] = {"Asta", "Alfreda", "Airine"};
-
-    int pav_k = 3;
-    string pav_m[3] = {"Alton", "Alsenas", "Jakaitis"};
-    string pav_f[3] = {"Joteika", "Sousa", "Tenorio"};
-
-    studentas temp;
-    if (random_to_int(2) == 1){
-        temp.vardas = vardai_m[random_to_int(vard_k)-1];
-        temp.pavarde = pav_m[random_to_int(vard_k)-1];
-
-        for (int i = 0; i < kiek_nd; i++){
-            temp.paz.push_back(random_to_int(10));
-        }
-        temp.egz = random_to_int(10);
-    }
-    else{
-        temp.vardas = vardai_f[random_to_int(vard_k)-1];
-        temp.pavarde = pav_f[random_to_int(vard_k)-1];
-
-        for (int i = 0; i < kiek_nd; i++){
-            temp.paz.push_back(random_to_int(10));
-        }
-        temp.egz = random_to_int(10);
-    }
-    return temp;
-}
+#include "RandInt.hpp"
 
 studentas pildik(int kiek_nd) {
   studentas temp;
@@ -69,16 +39,51 @@ studentas pildik(int kiek_nd) {
   return temp;
 }
 
-void spausdink_stud(vector<studentas> *st) {
-  cout << "Pradedamas studentu israsymas i konsole: " << endl;
-  for (auto &i : (*st)) {
-    cout << i.vardas << " " << i.pavarde << " ";
-    for (int p = 0; p < i.paz.size(); p++) {
-      cout << i.paz.at(p) << " ";
-    }
-    cout << ": " << i.egz << endl;
+void spausdink_stud(studentas &st) {
+  cout << st.vardas << " " << st.pavarde << " ";
+  for (int p = 0; p < st.paz.size(); p++) {
+    cout << st.paz.at(p) << " ";
   }
-  cout << "Studentu israsymas yra baigtas..." << endl;
+  cout << ": " << st.egz << endl;
 }
 
+
+void prikurk_studentu (vector<studentas> &st, int kiek, int kiek_nd) {
+
+  const int vardu_kiekis = 3;
+
+  string vardai_m[3] = {"Singailas", "Odisejas", "Algintas"};
+  string vardai_f[3] = {"Asta", "Alfreda", "Airine"};
+
+  string pav_m[3] = {"Alton", "Alsenas", "Jakaitis"};
+  string pav_f[3] = {"Joteika", "Sousa", "Tenorio"};
+
+  st.reserve(kiek);
+  RandInt rnd_name{0, vardu_kiekis-1};
+  RandInt rnd_mark{0, 10};
+  RandInt rnd_bool{0, 1};
+
+  for (int s = 0 ; s < kiek ; s++){
+    studentas temp;
+    if (rnd_bool()){
+      temp.vardas = vardai_m[rnd_name()];
+      temp.pavarde = pav_m[rnd_name()];
+
+      for (int i = 0; i < kiek_nd; i++){
+        temp.paz.push_back(rnd_mark());
+      }
+      temp.egz = rnd_mark();
+    }
+    else{
+      temp.vardas = vardai_f[rnd_name()];
+      temp.pavarde = pav_f[rnd_name()];
+
+      for (int i = 0; i < kiek_nd; i++){
+        temp.paz.push_back(rnd_mark());
+      }
+      temp.egz = rnd_mark();
+    }
+    st.push_back(temp);
+  }
+}
 
