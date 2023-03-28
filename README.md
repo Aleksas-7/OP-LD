@@ -3,37 +3,38 @@
 ### v0.5:
 
 Programa kuri originaliai buvo daryta tik su vectoriais, perkurta (atskirai) su deque, list konteinerių tipais. <br>
-Išmatuoti greičiai: (deque greičių matavimas buvo atliktas su kitų kompiuteriu)
+Išmatuoti greičiai: (deque greičių matavimas buvo atliktas su kitų kompiuteriu).<br>
+Laikas matuotas sekundėmis.
 
 | Failų dydis: 1_000           | Vectoriai | Listai | Deque |
 |------------------------------|-----------|--------|-------|
-| Nuskaitymas iš failo         | 2         | 6      | 8     |
+| Nuskaitymas iš failo         | 0         | 0,01   | 0     |
 | Rikiavimas didėjimo tvarka   | 0         | 0      | 0     |
 | Skirstymas į du konteinerius | 0         | 0      | 0     |
 
 | Failų dydis: 10_000          | Vectoriai | Listai | Deque |
 |------------------------------|-----------|--------|-------|
-| Nuskaitymas iš failo         | 37        | 43     | 23    |
-| Rikiavimas didėjimo tvarka   | 2         | 2      | 18    |
-| Skirstymas į du konteinerius | 0         | 0      | 7     |
+| Nuskaitymas iš failo         | 0,04      | 0,04   | 0,02  |
+| Rikiavimas didėjimo tvarka   | 0         | 0      | 0,02  |
+| Skirstymas į du konteinerius | 0         | 0      | 0,01  |
 
 | Failų dydis: 100_000         | Vectoriai | Listai | Deque |
 |------------------------------|-----------|--------|-------|
-| Nuskaitymas iš failo         | 348       | 384    | 118   |
-| Rikiavimas didėjimo tvarka   | 42        | 28     | 101   |
-| Skirstymas į du konteinerius | 15        | 6      | 40    |
+| Nuskaitymas iš failo         | 0,35      | 0,38   | 0,12  |
+| Rikiavimas didėjimo tvarka   | 0,04      | 0,03   | 0,1   |
+| Skirstymas į du konteinerius | 0,02      | 0,01   | 0,04  |
 
 | Failų dydis: 1_000_000       | Vectoriai | Listai | Deque |
 |------------------------------|-----------|--------|-------|
-| Nuskaitymas iš failo         | 3432      | 3731   | 1154  |
-| Rikiavimas didėjimo tvarka   | 496       | 410    | 1256  |
-| Skirstymas į du konteinerius | 183       | 69     | 412   |
+| Nuskaitymas iš failo         | 3,43      | 3,73   | 1,15  |
+| Rikiavimas didėjimo tvarka   | 0,5       | 0,41   | 1,26  |
+| Skirstymas į du konteinerius | 0,18      | 0,07   | 0,41  |
 
 | Failų dydis: 10_000_000      | Vectoriai | Listai | Deque |
 |------------------------------|-----------|--------|-------|
-| Nuskaitymas iš failo         | 34522     | 45458  | 12037 |
-| Rikiavimas didėjimo tvarka   | 5509      | 6329   | 8602  |
-| Skirstymas į du konteinerius | 1839      | 668    | 4322  |
+| Nuskaitymas iš failo         | 34,52     | 45,46  | 12,04 |
+| Rikiavimas didėjimo tvarka   | 5,51      | 6,33   | 8,6   |
+| Skirstymas į du konteinerius | 1,84      | 0,67   | 4,32  |
 
 **Vectoriaus ir listo knoteinerių tipo testavimas atliktas su:**
 <br>
