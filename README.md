@@ -3,7 +3,7 @@
 ### v0.5:
 
 Programa kuri originaliai buvo daryta tik su vectoriais, perkurta (atskirai) su deque, list konteinerių tipais. <br>
-Išmatuoti greičiai: (deque greičių matavimas buvo atliktas su kitų kompiuteriu).<br>
+Išmatuoti greičiai: (deque greičių matavimas buvo atliktas su kitu kompiuteriu).<br>
 Laikas matuotas sekundėmis.
 
 | Failų dydis: 1_000           | Vectoriai | Listai | Deque |
@@ -36,7 +36,7 @@ Laikas matuotas sekundėmis.
 | Rikiavimas didėjimo tvarka   | 5,51      | 6,33   | 8,6   |
 | Skirstymas į du konteinerius | 1,84      | 0,67   | 4,32  |
 
-**Vectoriaus ir listo knoteinerių tipo testavimas atliktas su:**
+**Vectoriaus ir listo konteinerių tipo testavimas atliktas su:**
 <br>
 Lenovo Legion Y530:
 <br>
