@@ -1,6 +1,7 @@
 # Obejktinio-Programavimo-LD
 
-### v0.5:
+<details>
+<summary> v0.5: </summary>
 
 Programa kuri originaliai buvo daryta tik su vectoriais, perkurta (atskirai) su deque, list konteinerių tipais. <br>
 Išmatuoti greičiai: (deque greičių matavimas buvo atliktas su kitu kompiuteriu).<br>
@@ -62,7 +63,9 @@ Sistemos tipas: 64-bit operacinė sistema, x64 pagrindo procesorius
 Kompiuterio atminties tipas: SSD
 <br>
 
-### v0.4:
+</details>
+<details>
+<summary> v0.4: </summary>
 
 1. Pertvarkyta main funkcija, kad butu lengviau pasinaudojama funkcijomis.
 2. Pridėta funkcija kuri sukuria atsitiktinių studentų failą pagal nurodytą dydi.
@@ -70,15 +73,22 @@ Kompiuterio atminties tipas: SSD
 
 2 ir 3 punktų veikimo greičiai yra matuojami.
 
-### v0.3:
+</details>
+<details>
+<summary> v0.3: </summary>
 
 Programos failai išskirstyti per kelis failus.
 
-### v0.2: 
+</details>
+<details>
+<summary> v0.2: </summary>
 
 Pridėjau būdą nuskaityti studentus iš atskiro duomenų failo, ir juos atspausdinti "out.txt" faile.
 
-### v0.1:
+</details>
+<details> 
+
+<summary> v0.1: </summary>
 
 Čia aš  viešinu savo savo atliekamus labaratorinius darbus.
 
@@ -97,3 +107,4 @@ Ir galiausiai išvedama informacija:
 
 Pavardė | Vardas | Galutinis pažimys
 
+</details>
