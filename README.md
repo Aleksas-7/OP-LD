@@ -1,5 +1,8 @@
 # Obejktinio-Programavimo-LD
 
+v1.0:
+
+
 <details>
 <summary> v0.5: </summary>
 
