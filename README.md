@@ -1,7 +1,47 @@
 # Obejktinio-Programavimo-LD
 
-v1.0:
+<details>
+<summary> v1.0: </summary>
 
+<details>
+<summary> Pirmo ir antro metodo atilkimo greičių lentelės </summary>
+
+| Pirmas metodas:                       |           |        |        | Antras metodas: |           |        |        |
+|---------------------------------------|-----------|--------|--------|-----------------|-----------|--------|--------|
+| Failu dydis: 1_000                    | Vectoriai | Listai | Deckai |                 | Vectoriai | Listai | Deckai |
+| Nuksaitymas is   failo I konteineri   | 0         | 0      | 0      |                 | 0         | 0      | 0      |
+| Studentu   rikiavimas didejimo tvarka | 0         | 0      | 0      |                 | 0         | 0      | 0      |
+| studentu   skirstymas I dvi grupes    | 0         | 0      | 0      |                 | 0         | 0      | 0      |
+|                                       |           |        |        |                 |           |        |        |
+| Failu dydis: 10_000                   | Vectoriai | Listai | Deckai |                 | Vectoriai | Listai | Deckai |
+| Nuksaitymas is   failo I konteineri   | 0,024     | 0,015  | 0,015  |                 | 0,018     | 0,015  | 0,031  |
+| Studentu   rikiavimas didejimo tvarka | 0,015     | 0      | 0,017  |                 | 0,002     | 0      | 0,015  |
+| studentu   skirstymas I dvi grupes    | 0         | 0      | 0      |                 | 0         | 0,015  | 0      |
+|                                       |           |        |        |                 |           |        |        |
+| Failu dydis: 100_000                  | Vectoriai | Listai | Deckai |                 | Vectoriai | Listai | Deckai |
+| Nuksaitymas is   failo I konteineri   | 0,175     | 0,112  | 0,209  |                 | 0,162     | 0,197  | 0,212  |
+| Studentu   rikiavimas didejimo tvarka | 0,05      | 0,012  | 0,169  |                 | 0,042     | 0,03   | 0,172  |
+| studentu   skirstymas I dvi grupes    | 0,018     | 0,04   | 0,06   |                 | 0,018     | 0,05   | 0,05   |
+|                                       |           |        |        |                 |           |        |        |
+| Failu dydis: 1_000_000                | Vectoriai | Listai | Deckai |                 | Vectoriai | Listai | Deckai |
+| Nuksaitymas is   failo I konteineri   | 1,69      | 1,227  | 1,991  |                 | 1,703     | 1,985  | 1,992  |
+| Studentu   rikiavimas didejimo tvarka | 0,594     | 0,379  | 2,196  |                 | 0,593     | 0,525  | 2,187  |
+| studentu   skirstymas I dvi grupes    | 0,211     | 0,441  | 0,657  |                 | 0,211     | 0,649  | 0,589  |
+|                                       |           |        |        |                 |           |        |        |
+| Failu dydis: 10_000_000               | Vectoriai | Listai | Deckai |                 | Vectoriai | Listai | Deckai |
+| Nuksaitymas is   failo I konteineri   | 16,593    | 11,755 | 20,454 |                 | 16,62     | 19,965 | 20,318 |
+| Studentu   rikiavimas didejimo tvarka | 7,252     | 6,431  | 26,761 |                 | 7,258     | 8,571  | 26,507 |
+| studentu   skirstymas I dvi grupes    | 2,326     | 4,614  | 30,169 |                 | 2,172     | 6,65   | 8,031  |
+
+Testavimo metu taip pat buvoma apytkisliai tikrinama kiek RAM naudoja programa, veikdama su dydžiausiu failų dydžių (10_000_000). Rezultatai:
+| Matuota GB | Pirmas metodas:          | Antras metodas: |
+|------------|--------------------------|-----------------|
+| Vectoriai  | 1,7                      | 1,4             |
+| Listai     | 4,1                      | 3               |
+| Deckai     | 13+(kompiuterio limitas) | 11              |
+</details>
+
+</details>
 
 <details>
 <summary> v0.5: </summary>
