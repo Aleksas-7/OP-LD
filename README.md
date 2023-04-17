@@ -1,10 +1,27 @@
 # Obejktinio-Programavimo-LD
 
 <details>
-<summary> v1.0: </summary>
+<summary> Naudojimosi instruksija</summary>
+
+Pasileidus programa terminale pasirodys tekstas prašantis pasirinki ką jūs norite daryti, variantai yra:
+ * I programą ikelti studentus iš atitinkamo sudentų duomenų failo.
+ * Išvesti esamus(suvestus) studentus į failą pavadinimu "out.txt".
+ * Suvedinėti studentus per konsolę.
+ * Testavimui sukurti atsitiktinių studentų duomenų.
+ * Testavimui sukurti atsitiktinių studentų duomenų failą.
+ * Turimą studentų duomenų failą nnuskaityti ir iš jo sukurti du naujus: išlaikiusių ir ne.
+ 
+ * Baigus programos naudojimus iveskite 'n', tai išvalys visą esamą informaciją ir užbaigs veikimą.
+ 
+ * P.S. jei testuojate ir turite 5 studentų failus: studentai1000.txt, studentai10000.txt, studentai100000.txt, studentai1000000.txt, studentai10000000.txt. Galite ivesti raide 't', kuri pratestuos visus šiuos failus automatiškai.
+
+</details>
 
 <details>
-<summary> Pirmo ir antro metodo atilkimo greičių lentelės </summary>
+<summary> v1.0: </summary>
+
+
+**Pirmo ir antro metodo atilkimo greičių lentelės, rezultatai**
 
 | Pirmas metodas:                       |           |        |        | Antras metodas: |           |        |        |
 |---------------------------------------|-----------|--------|--------|-----------------|-----------|--------|--------|
@@ -39,6 +56,27 @@ Testavimo metu taip pat buvoma apytkisliai tikrinama kiek RAM naudoja programa, 
 | Vectoriai  | 1,7                      | 1,4             |
 | Listai     | 4,1                      | 3               |
 | Deckai     | 13+(kompiuterio limitas) | 11              |
+
+Rezultatų apibendrinimas:
+1. Kompiuterio atminties mažiausiai naudojo vectoriai!
+2. Pirmos ir antros strategijos vectorių greičiai yra beveik tokie patys.
+3. Listai, nors ir ne patys greičiausi, bet optimizavimas su juo parodė dydžiasius pagreitėjimus, bei atminties sutaupymus.
+4. Kažkas negerai su decku veikla testavimo kompiuterije.(laikai labai ilgi, RAM 'ryja' labai daug, paskutinis testavimas pirmoje versijoje LABAI pastrigo)
+
+<details>
+<summary>Testavimo kompiuterio info. </summary>
+
+Lenovo Legion 5 15IMH05H:
+<br>
+Procesorius: Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz   2.59 GHz
+<br>
+RAM: 16,0 GB (15,9 GB usable)
+<br>
+Sistemos tipas: 64-bit operacinė sistema, x64 pagrindo procesorius
+<br>
+Kompiuterio atminties tipas: SSD
+<br>
+
 </details>
 
 </details>
