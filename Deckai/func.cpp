@@ -3,14 +3,16 @@
 // Ivesties tikrinimas:
 // https://www.itcodar.com/c-plus-1/how-to-do-input-validation-in-c-with-cin.html
 
-double rask_studento_galutini_vid(vector<int> paz, int egz) 
+
+
+double rask_studento_galutini_vid(deque<int> &paz, int egz) 
 {
   double vidurkis = accumulate(paz.begin(), paz.end(), 0);
   vidurkis /= paz.size();
   return (0.4 * vidurkis) + (0.6 * egz);
 }
 
-double rask_studento_galutine_med(vector<int> paz, int egz) 
+double rask_studento_galutine_med(deque<int> &paz, int egz) 
 {
   double galutinis;
   sort(paz.begin(), paz.end());
@@ -63,7 +65,7 @@ char duok_man_char(char a = '.', char b = '.', char c = '.')
   return ats;
 }
 
-void spausd_v0_1(vector<studentas> &st) 
+void spausd_v0_1(deque<studentas> &st) 
 {
   cout << " | Jei norite matyti" << endl;
   cout << "vidurkius, iveskite v" << endl;
@@ -102,6 +104,8 @@ char duok_man_chara()
   char ats;
   while (true) {
     if (cin >> ats) {
+      cin.clear();
+      cin.ignore(50, '\n');
       return ats;
     } else {
       cout << "Ivestis neteisinga. " << endl;

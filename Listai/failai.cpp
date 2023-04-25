@@ -1,6 +1,6 @@
 #include "Mylib.h"
 
-void nuskaityk(vector<studentas> &st, string f_pav){
+void nuskaityk(list<studentas> &st, string f_pav){
 
   std::stringstream buffer;
   ifstream fin (f_pav);
@@ -26,7 +26,7 @@ void nuskaityk(vector<studentas> &st, string f_pav){
     throw std::runtime_error("Studentai irase neturi namu darbu informacijos.");
   }
   // Susiskaiciavome namu darbu sk is pirmines eil.
-  st.reserve(10000000);
+  
   studentas temp;
 
   while(buffer){
@@ -54,7 +54,7 @@ void nuskaityk(vector<studentas> &st, string f_pav){
   }
 }
 
-void spausd_v0_2(vector<studentas> &st){
+void spausd_v0_2(list<studentas> &st){
 
   std::ostringstream ss;
 
@@ -73,7 +73,6 @@ void spausd_v0_2(vector<studentas> &st){
   }
   fout << outputas;
   fout.close();
-  cout << "Studentai israsyti i faila out.txt" << endl;
 }
 
 void sukurk_v0_4(int dydis, int kiek_nd){
@@ -93,7 +92,7 @@ void sukurk_v0_4(int dydis, int kiek_nd){
   }
   ss << left << setw(5) << "Egzaminas";
 
-  vector<studentas> temp;
+  list<studentas> temp;
 
   string outputas = ss.str();
   ss.str("");
@@ -122,12 +121,9 @@ void sukurk_v0_4(int dydis, int kiek_nd){
   fout.close();
 }
 
-bool findGalvocius (studentas t)
-{
-  return t.galutinis >= 5;
-}
 
-void studentu_padalinimas(vector<studentas> &st, int dydis){
+
+void studentu_padalinimas(list<studentas> &nusk, list<studentas> &galv, int dydis){
 
   std::ostringstream ss;
   ss << dydis;
@@ -143,12 +139,51 @@ void studentu_padalinimas(vector<studentas> &st, int dydis){
   foutn << left << setw(15) << "Vardas" << setw(15) << "Pavarde" << setw(15) << "Galutinis\n";
   foutn << "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -";
 
+  int count = 0;
+  string outputas;
 
+  for (auto &s : nusk){
+    if (count == 10000){
+      foutn << outputas;
+      outputas = "";
+      count = 0;
+    }
+    ss << "\n" << left << setw(15) << s.vardas  << setw(15) << s.pavarde;
+    ss << left << setw(20) << setprecision(3) << s.galutinis;
+    outputas += ss.str();
+    ss.str("");
+  }
+  foutn << outputas;
+  foutn.close();
+
+  count = 0;
+  outputas = "";
+
+  for (auto &s : galv){
+    if (count == 10000){
+      fout << outputas;
+      outputas = "";
+      count = 0;
+    }
+    ss << "\n" << left << setw(15) << s.vardas  << setw(15) << s.pavarde;
+    ss << left << setw(20) << setprecision(3) << s.galutinis;
+    outputas += ss.str();
+    ss.str("");
+  }
+  fout << outputas;
+  fout.close();
+
+
+
+  /*
   std::vector<studentas>::iterator it;
   it = std::find_if(st.begin(), st.end(),  findGalvocius);
 
   int count = 0;
   string outputas;
+
+
+
   for (int n = 0 ; n < it - st.begin() ; n++){
     if (count == 10000){
       foutn << outputas;
@@ -178,5 +213,5 @@ void studentu_padalinimas(vector<studentas> &st, int dydis){
     ss.str("");
   }
   fout << outputas;
-  fout.close();
+  fout.close();*/
 }
