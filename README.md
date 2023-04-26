@@ -14,13 +14,41 @@ Pasileidus programa terminale pasirodys tekstas prašantis pasirinki ką jūs no
  * Baigus programos naudojimus iveskite 'n', tai išvalys visą esamą informaciją ir užbaigs veikimą.
  
  * P.S. jei testuojate ir turite 5 studentų failus: studentai1000.txt, studentai10000.txt, studentai100000.txt, studentai1000000.txt, studentai10000000.txt. Galite ivesti raide 't', kuri pratestuos visus šiuos failus automatiškai.
+</details>
+
+
+<details>
+<summary> v1.1  </summary>
+
+Lentelėse laikas yra matuotas sekundėmis, matavimas atliktas su vectoriais.
+|         Failo   dydis 1_000_000         | class | struct |
+|:---------------------------------------:|-------|--------|
+| Nuksaitymas is   failo I konteineri     | 6.692 | 6.278  |
+| Studentu     rikiavimas didejimo tvarka | 0.847 | 0.811  |
+| Studentu     skirstymas I dvi grupes    | 0.203 | 0.291  |
+|                                         |       |        |
+|           Failo dydis 100_000           | class | struct |
+| Nuksaitymas is   failo I konteineri     | 0.679 | 0.626  |
+| Studentu     rikiavimas didejimo tvarka | 0.067 | 0.088  |
+| Studentu     skirstymas I dvi grupes    | 0.019 | 0.027  |
+
+|                       | O1     | O2     | O3     |
+|-----------------------|--------|--------|--------|
+| Memory of .exe file:  | 197 KB | 196 KB | 200 KB |
+
+Rezultatai: 
+ * Struct yra greitesni nuskaitymuose ir rikiavimuose.
+ * Class yra gretesnis studentų skirstime.
+
 
 </details>
 
+<!-- ============================================================================================================================================================ -->
+<details>
+<summary> v1.0 ir ankstesnės versijos </summary>
+
 <details>
 <summary> v1.0: </summary>
-
-
 **Pirmo ir antro metodo atilkimo greičių lentelės, rezultatai**
 
 | Pirmas metodas:                       |           |        |        | Antras metodas: |           |        |        |
@@ -188,4 +216,5 @@ Ir galiausiai išvedama informacija:
 
 Pavardė | Vardas | Galutinis pažimys
 
+</details>
 </details>
