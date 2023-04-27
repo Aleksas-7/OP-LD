@@ -20,7 +20,7 @@ Pasileidus programa terminale pasirodys tekstas prašantis pasirinki ką jūs no
 <details>
 <summary> v1.1  </summary>
 
-Lentelėse laikas yra matuotas sekundėmis, matavimas atliktas su vectoriais.
+Lentelėse laikas yra matuotas sekundėmis, matavimas atliktas su vectoriaus tipo konteineriu.
 |         Failo   dydis 1_000_000         | class | struct |
 |:---------------------------------------:|-------|--------|
 | Nuksaitymas is   failo I konteineri     | 6.692 | 6.278  |
