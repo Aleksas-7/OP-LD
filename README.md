@@ -21,20 +21,21 @@ Pasileidus programa terminale pasirodys tekstas prašantis pasirinki ką jūs no
 <summary> v1.1  </summary>
 
 Lentelėse laikas yra matuotas sekundėmis, matavimas atliktas su vectoriaus tipo konteineriu.
-|         Failo   dydis 1_000_000         | class | struct |
-|:---------------------------------------:|-------|--------|
-| Nuksaitymas is   failo I konteineri     | 6.692 | 6.278  |
-| Studentu     rikiavimas didejimo tvarka | 0.847 | 0.811  |
-| Studentu     skirstymas I dvi grupes    | 0.203 | 0.291  |
-|                                         |       |        |
-|           Failo dydis 100_000           | class | struct |
-| Nuksaitymas is   failo I konteineri     | 0.679 | 0.626  |
-| Studentu     rikiavimas didejimo tvarka | 0.067 | 0.088  |
-| Studentu     skirstymas I dvi grupes    | 0.019 | 0.027  |
+|         Failo   dydis 1_000_000         | class | struct | O1    | O2    | O3    | Be flag |
+|:---------------------------------------:|-------|--------|-------|-------|-------|---------|
+| Nuksaitymas is   failo I konteineri     | 6.692 | 6.278  | 5.296 | 6.724 | 5.33  | 9.475   |
+| Studentu     rikiavimas didejimo tvarka | 0.847 | 0.811  | 0.656 | 0.852 | 0.75  | 8.852   |
+| Studentu     skirstymas I dvi grupes    | 0.203 | 0.291  | 0.158 | 0.211 | 0.184 | 0.57    |
 
-|                       | O1     | O2     | O3     |
-|-----------------------|--------|--------|--------|
-| Memory of .exe file:  | 197 KB | 196 KB | 200 KB |
+|          Failo   dydis 100_000          | class | struct | O1    | O2    | O3    | Be flag |
+|:---------------------------------------:|-------|--------|-------|-------|-------|---------|
+| Nuksaitymas is   failo I konteineri     | 0.679 | 0.626  | 0.62  | 0.879 | 0.533 | 0.931   |
+| Studentu     rikiavimas didejimo tvarka | 0.067 | 0.088  | 0.078 | 0.075 | 0.056 | 0.775   |
+| Studentu     skirstymas I dvi grupes    | 0.019 | 0.027  | 0.011 | 0.025 | 0.024 | 0.069   |
+
+|                       | O1     | O2     | O3     | Be flag |
+|-----------------------|--------|--------|--------|---------|
+| Memory of .exe file:  | 197 KB | 196 KB | 200 KB | 265 KB  |
 
 Rezultatai: 
  * Struct yra greitesni nuskaitymuose ir rikiavimuose.
