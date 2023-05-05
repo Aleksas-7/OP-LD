@@ -9,10 +9,10 @@ int main(){
     cout << " -- " << s << endl;
 
     
-    Studentas s1 = s;
+    Studentas s1(s);
     cout << "   Copy cons." << s1 << s << "\n";
 
-    Studentas s2 = move(s);
+    Studentas s2(move(s));
     cout << "   Move cons." << s2 << s << "\n";
 
     paz = {2, 2, 2, 2};
@@ -23,7 +23,7 @@ int main(){
 
     paz = {2, 2, 2, 2};
     Studentas s5("A", "B", paz, 1);
-    s3.rask_galutinis_vid();
+    s5.rask_galutinis_vid();
     Studentas s6 = move(s5);
     cout << "   Move assignment" << s6 << s5 << "\n";
 
