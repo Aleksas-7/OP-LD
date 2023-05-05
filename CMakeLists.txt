@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.25)
 project(Darbas_su_stud_failais)
-incude_directories(include)
-file(GLOB SOURCES "src/*.cpp")
-add_executable(Darbas_su_stud_failais ${SOURCES})
+incude_directories(${CMAKE_CURRENT_SOURCE_DIR}/headers)
+file(GLOB SOURCES "*.cpp")
+add_executable(Darbas_su_stud_failais main.cpp)
