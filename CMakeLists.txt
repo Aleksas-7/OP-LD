@@ -1,7 +1,0 @@
-cmake_minimum_required(VERSION 3.25)
-project(Darbas_su_studentu_failais)
-file(GLOB SOURCES *.cpp)
-file(GLOB HEADERS*.h)
-add_library(Mylib ${SOURCES} ${HEADERS})
-add_executable(Darbas_su_studentu_failais main_two.cpp)
-target_link_libraries(Darbas_su_studentu_failais Mylib)
