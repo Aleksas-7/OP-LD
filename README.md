@@ -2,19 +2,40 @@
 
 <details>
 <summary> Naudojimosi instruksija</summary>
-
-Pasileidus programa terminale pasirodys tekstas prašantis pasirinki ką jūs norite daryti, variantai yra:
+Pasileidus programa, pasirinkimai ką jūs norite daryti:
+ 
  * I programą ikelti studentus iš atitinkamo sudentų duomenų failo.
  * Išvesti esamus(suvestus) studentus į failą pavadinimu "out.txt".
- * Suvedinėti studentus per konsolę.
  * Testavimui sukurti atsitiktinių studentų duomenų.
  * Testavimui sukurti atsitiktinių studentų duomenų failą.
  * Turimą studentų duomenų failą nnuskaityti ir iš jo sukurti du naujus: išlaikiusių ir ne.
  
- * Baigus programos naudojimus iveskite 'n', tai išvalys visą esamą informaciją ir užbaigs veikimą.
+ - Baigus programos naudojimus iveskite 'n', tai išvalys visą esamą informaciją ir užbaigs veikimą.
  
  * P.S. jei testuojate ir turite 5 studentų failus: studentai1000.txt, studentai10000.txt, studentai100000.txt, studentai1000000.txt, studentai10000000.txt. Galite ivesti raide 't', kuri pratestuos visus šiuos failus automatiškai.
 </details>
+
+<details>
+ 
+ <summary> v1.5 </summary>
+ 1. Sukurta bazinė, abstrakti klasė Zmogus, iš kurios išvesta clasė Studentas
+
+</details>
+
+<details>
+ 
+ <summary> v1.2 </summary>
+ 
+ 1. Relizuota "rule of five"
+ 2. pridėtas << operatorius prie Studentas clasės:
+ ```c++
+ friend std::ostream& operator<<(std::ostream& out, const Studentas& s){
+        out << "\n" << left << setw(15) << s.vardas << setw(15) << s.pavarde << left << setw(5) << s.galutinis_vid;
+        return out;
+ }
+ ```
+ 
+ </details>
 
 
 <details>
