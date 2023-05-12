@@ -17,6 +17,16 @@ Pasileidus programa, pasirinkimai ką jūs norite daryti:
 
 <details>
  
+<summary> v2.0 </summary>
+ 
+ * Sukurtas doxygen katalogas.
+ * Realizuoti Unit testai. (nekelti į github)
+ * Sukurtas automatinis idiegimo failas.
+ 
+</details>
+
+<details>
+ 
  <summary> v1.5 </summary>
  1. Sukurta bazinė, abstrakti klasė Zmogus, iš kurios išvesta clasė Studentas
 
